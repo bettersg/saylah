@@ -1,6 +1,9 @@
-# Freespeech
+# SayLah
 
 A free program designed to help people who are non-verbal.
+Project page - https://projects.better.sg/SayLah-communication-for-the-nonverbal-283d29898fad485a8ac95394100ac106
+
+Everything listed below is from Merkie, the person with the original idea behind the tool! https://www.youtube.com/watch?v=owr2aIHRJA4
 
 ## Why Was This Created?
 
