@@ -35,13 +35,8 @@ Please make sure to follow our [Code Of Conduct](/.github/CODE_OF_CONDUCT.md) in
 ## Authors
 
 ### Core Team
-* **Archer Calder** - *Initial work/Core Team Member/Creator* - [Merkie](https://github.com/Merkie)
 
-    [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/merkie)
-
-* **Bailey Townsend** - *Core Team Member/Developer/Collaborator* - [GitHub](https://github.com/fatfingers23) [Linkedin](https://www.linkedin.com/in/bailey-townsend-25b195105) 
-
-    [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T6T61FYPX)
+Need to add better.sg contributors here and credit the original authors of the Freespeech tool.
 
 
 ## Contributors
@@ -54,9 +49,6 @@ Made with [contributors-img](https://contributors-img.firebaseapp.com).
 
 ## Community
 
-<a href="https://discord.gg/76PrNC6">
-  <img src="https://discordapp.com/api/guilds/680203682528100464/widget.png?style=banner3" />
-</a>
 
 ## License
 
@@ -64,5 +56,4 @@ This project is licensed under the [MIT License.](LICENSE.md)
 
 ## Acknowledgments
 
-* Thanks to TikTok for getting this project recognition.
 
