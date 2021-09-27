@@ -14,12 +14,12 @@ jobs:
           cache-name: cache-node-modules
         with:
           path: ~/.npm # npm cache files are stored in `~/.npm` on Linux/macOS
-          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('vueapp/package-lock.json') }}
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-${{ env.cache-name }}-
       - name: npm install
-        run: cd vueapp && npm ci && cd ../
+        run: npm ci && cd ../
       - name: lint
-        run: cd vueapp && npm run lint && cd ../
+        run: npm run lint && cd ../
       - name: production build
-        run: cd vueapp && npm run build && cd ../
+        run: npm run build && cd ../

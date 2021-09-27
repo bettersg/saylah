@@ -30,7 +30,7 @@ Following this [template](ISSUE_TEMPLATE/bug_report.md) will quicken the effort 
 * [npm LTS](https://nodejs.org/en/)
 
 #### Dev Setup
-All commands are ran inside of a terminal inside of the vueapp folder
+All commands are ran inside of a terminal inside of the saylah folder
 ```
 npm install
 ```
@@ -40,7 +40,7 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production. Production ready code in /vueapp/dist
+### Compiles and minifies for production. Production ready code in /dist
 ```
 npm run build
 ```

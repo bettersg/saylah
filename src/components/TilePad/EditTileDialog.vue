@@ -95,7 +95,7 @@
 
 <script>
 import { mapActions, mapGetters } from 'vuex';
-import TileData from '../../../../build.json';
+import TileData from '../../../build.json';
 
 export default {
 	...mapGetters('tilePad', [
