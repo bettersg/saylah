@@ -17,9 +17,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-${{ env.cache-name }}-
       - name: npm install
-        run: npm ci && cd ../
+        run: npm ci
       - name: check linting passes
-        run: npm run lint:nofix && cd ../
+        run: npm run lint:nofix
   test:
     runs-on: ubuntu-latest
     steps:
@@ -34,6 +34,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-${{ env.cache-name }}-
       - name: npm install
-        run: npm ci && cd ../
+        run: npm ci
       - name: unit tests
-        run: npm run test:unit && cd ../
+        run: npm run test:unit
