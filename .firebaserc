@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "saylah"
+  },
+  "targets": {
+    "saylah": {
+      "hosting": {
+        "staging": [
+          "saylah-staging"
+        ],
+        "live": [
+          "saylah"
+        ]
+      }
+    }
   }
 }

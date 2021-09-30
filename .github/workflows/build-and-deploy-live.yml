@@ -1,14 +1,16 @@
-name: Build and Deploy
+name: Build and Deploy (Live)
 on:
   push:
     branches:
-      - master
+      - deploy
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Fetch repo
         uses: actions/checkout@v2
+        with:
+          ref: deploy
       - name: cache node modules
         uses: actions/cache@v1
         env:
@@ -33,4 +35,5 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_SAYLAH }}'
           channelId: live
           projectId: saylah
+          target: live
 
