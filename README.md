@@ -17,24 +17,24 @@ This can currently only be ran in web browsers such as chrome and firefox howeve
 
 ## What is the plan for the future?
 
-The program is always evolving and so the future development ideas can be found in the issues section under the issues [enhancement](https://github.com/Merkie/freespeech/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement) tab.
+The program is always evolving and so the future development ideas can be found in the issues section under the issues [enhancement](https://github.com/bettersg/saylah/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement) tab.
 
 ## How do I use the program?
 
-The web site for the program is up and useable, you can find it [here](http://freespeechaac.com/).
+The web site for the program is up and useable, you can find it [here](http://saylah.sg/). All the changes merged with the `deploy` branch are available there.
 
 ## Contributing
 
-Can find our source code on [Github](https://github.com/Merkie/freespeech).
+Can find our source code on [Github](https://github.com/bettersg/saylah).
 
-Please read [our Contributing guide](/.github/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us. When contributing, email me at archercalder@gmail.com.
+Please read [our Contributing guide](/.github/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us. When contributing, email us at [chaitanyabaranwal@better.sg](mailto:chaitanyabaranwal@better.sg) or [sids@better.sg](mailto:sids@better.sg).
 
 Please make sure to follow our [Code Of Conduct](/.github/CODE_OF_CONDUCT.md) in all manners when contributing to this project.
 
 
 ## Authors
 
-### Core Team
+### Original Freespeech app
 * **Archer Calder** - *Initial work/Core Team Member/Creator* - [Merkie](https://github.com/Merkie)
 
     [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/merkie)
@@ -43,26 +43,18 @@ Please make sure to follow our [Code Of Conduct](/.github/CODE_OF_CONDUCT.md) in
 
     [![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T6T61FYPX)
 
+### Porting over Freespeech to Saylah
 
-## Contributors
-None of this would be possible without you all. Thank you!
-<a href="https://github.com/Merkie/freespeech/graphs/contributors">
-  <img src="https://contributors-img.firebaseapp.com/image?repo=Merkie/freespeech" />
-</a>
-
-Made with [contributors-img](https://contributors-img.firebaseapp.com).
+* **Siddhant Shrivastava** - [GitHub](https://github.com/sidcode)
+* **Chaitanya Baranwal** - [GitHub](https://github.com/chaitanyabaranwal)
 
 ## Community
 
-<a href="https://discord.gg/76PrNC6">
-  <img src="https://discordapp.com/api/guilds/680203682528100464/widget.png?style=banner3" />
+<a href="https://better.sg/join.html">
+  <img width="192.35" height="50" src="https://better.sg/wp-content/uploads/2020/12/betterwordlogo@0.5x.png" />
 </a>
 
 ## License
 
 This project is licensed under the [MIT License.](LICENSE.md)
-
-## Acknowledgments
-
-* Thanks to TikTok for getting this project recognition.
 

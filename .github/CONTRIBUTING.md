@@ -6,15 +6,16 @@
  Please note we have a [code of conduct](../.github/CODE_OF_CONDUCT.md), please follow it in all your interactions with the project.
 
 ## Feature Requests
-We love feature requests! We want to make Freespeech as accessible to as many people as possible. If you have an
-idea you'd like to see in Freespeech feel free to submit an issue following our [template format](ISSUE_TEMPLATE/feature_request.md). Or even a Pull Request implementing the
+
+We love feature requests! We want to make Saylah as accessible to as many people as possible. If you have an
+idea you'd like to see in Saylah feel free to submit an issue, or even a Pull Request implementing the
 change! Although we won't be able to implement every feature everyone may make or want. We want to get as many as possible
-that improves Freespeech.
+that improves Saylah.
 
 ## <a name="issue"></a> Found an Issue?
 
 If you find a bug in the source code or any other issues you can help us by
-submitting an issue to our [GitHub Repository](https://github.com/Merkie/freespeech/issues). Even better you can submit a Pull Request
+submitting an issue to our [GitHub Repository](https://github.com/bettersg/saylah/issues). Even better you can submit a Pull Request
 with a fix.
 
 ### Submitting an Issue
@@ -22,7 +23,6 @@ Before you submit your issue search the archive, maybe your question was already
 
 If your issue appears to be a bug and hasn't been reported, open a new issue. Help us to maximize
 the effort we can spend fixing issues and adding new features, by not reporting duplicate issues.
-Following this [template](ISSUE_TEMPLATE/bug_report.md) will quicken the effort of fixing the issue.
 
 
 ## Installation and Setup
@@ -65,18 +65,18 @@ Please keep unit testing in mind when contributing. Here is a great resource for
  ##  <a name="prProcess"></a> Pull Request Process
 Before you submit your pull request consider the following guidelines:
 
-* Search [GitHub](https://github.com/Merkie/freespeech/pulls) for an open or closed Pull Request
+* Search [GitHub](https://github.com/bettersg/saylah/pulls) for an open or closed Pull Request
   that relates to your submission. You don't want to duplicate effort.
 * [Fork](https://help.github.com/articles/fork-a-repo/) this repo.
 * [Clone](https://help.github.com/articles/cloning-a-repository/) your copy.
     ```shell
-    git clone https://github.com/YOUR_USERNAME/freespeech.git
-    cd freespeech/
+    git clone https://github.com/YOUR_USERNAME/saylah.git
+    cd saylah/
     ```
 * After cloning, set a new remote [upstream](https://help.github.com/articles/configuring-a-remote-for-a-fork/) (this helps to keep your fork up to date)
     
     ```shell
-    git remote add upstream https://github.com/Merkie/freespeech.git
+    git remote add upstream https://github.com/bettersg/saylah.git
     ```
 
 * Make your changes in a new git branch:
@@ -101,7 +101,7 @@ Before you submit your pull request consider the following guidelines:
     git push origin my-fix-branch
     ```
 
-In GitHub, send a pull request to `freespeech:master`.
+In GitHub, send a pull request to `saylah:master`.
 If we suggest changes, then:
 
 * Make the required updates.
