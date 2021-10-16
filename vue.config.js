@@ -15,9 +15,10 @@ module.exports = {
 		}
 	},
 	transpileDependencies: ['vuetify'],
+  lintOnSave: false,
 
 	pwa: {
-		name: 'Freespeech',
+		name: 'SayLah!',
 		themeColor: '#4DBA87',
 		msTileColor: '#000000',
 		appleMobileWebAppCapable: 'yes'

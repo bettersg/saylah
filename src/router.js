@@ -1,12 +1,12 @@
 import Vue from 'vue';
-import Router from 'vue-router';
+import VueRouter from 'vue-router';
 import TilePad from './views/TilePad.vue';
 import About from './views/About.vue';
 import Settings from './views/Settings.vue';
 
-Vue.use(Router);
+Vue.use(VueRouter);
 
-export default new Router({
+export default new VueRouter({
 	mode: 'history',
 	routes: [
 		{

@@ -19,7 +19,7 @@
 				<Tile
 					v-if="editMode"
 					id="newTile"
-					:new-tile="true"							
+					:new-tile="true"
 					:tile-page="currentTilePadPage"
 				/>
 
@@ -101,7 +101,7 @@ export default {
 			) {
 				this.setCustomTilePadData(this.tileData);
 			}
-		
+
 			let tilePadTiles = this.customTilePadOption
 				? this.customTilePadData
 				: this.tileData;
