@@ -13,7 +13,7 @@
 					<v-form
 						ref="form"
 						v-model="valid"
-					>	
+					>
 						<v-row>
 
 							<v-col cols="12">
