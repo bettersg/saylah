@@ -19,7 +19,7 @@
 				<v-img
 					max-height="32"
 					max-width="32"
-					aspect-ratio="1"					
+					aspect-ratio="1"
 					src="https://img.icons8.com/officexs/64/000000/plus-math.png"
 				/>
 			</v-row>

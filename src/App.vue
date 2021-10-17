@@ -1,13 +1,40 @@
 <template>
 	<v-app>
+		<v-navigation-drawer
+			v-model="drawerShown"
+			temporary app>
+			<v-list
+				dense
+				nav>
+				<router-link v-for="item in routes"
+					:to="item.route"
+					@click="drawerShown = false"
+					style="text-decoration: none; color: inherit;"
+					:key="item.name">
+					<v-list-item link>
+						<v-list-item-icon>
+							<v-icon>{{ item.icon }}</v-icon>
+						</v-list-item-icon>
+
+						<v-list-item-content>
+							<v-list-item-title>
+								{{ item.name }}
+							</v-list-item-title>
+						</v-list-item-content>
+					</v-list-item>
+					<v-divider/>
+				</router-link>
+			</v-list>
+		</v-navigation-drawer>
 		<v-app-bar
 			app
 			:color="taskbarColor"
 			dark
 		>
-			<div class="d-flex align-center">
-				<h2>Freespeech</h2>
-			</div>
+			<v-app-bar-nav-icon @click="drawerShown = !drawerShown"/>
+			<v-toolbar-title>
+				SayLah!
+			</v-toolbar-title>
 
 			<v-spacer />
 
@@ -62,7 +89,7 @@
 
 		<v-content>
 			<router-view />
-			<editDialog />
+			<EditDialog />
 		</v-content>
 
 		<v-snackbar
@@ -92,6 +119,7 @@
 import EditDialog from '@/components/TilePad/EditTileDialog';
 import NumberPad from '@/components/NumberPad/NumberPad';
 import { mapActions, mapGetters } from 'vuex';
+import store from '@/plugins/vuex';
 
 export default {
 	name: 'App',
@@ -103,6 +131,8 @@ export default {
 		passcodeEntry: false,
 		passcodeError: false,
 		passcodeLength: 4,
+		drawerShown: false,
+		store: store,
 	}),
 	computed: {
 		...mapGetters({
@@ -118,7 +148,27 @@ export default {
 		},
 		taskbarColor() {
 			return this.editMode ? 'success' : 'primary';
-		}
+		},
+		routes() {
+			// Add routes here to correspond to router.ts
+			return [
+				{
+					name: 'Home',
+					route: '/',
+					icon: 'mdi-home',
+				},
+				{
+					name: 'About',
+					route: '/about',
+					icon: 'mdi-information',
+				},
+				{
+					name: 'Settings',
+					route: '/settings',
+					icon: 'mdi-cog',
+				}
+			];
+		},
 	},
 	created() {
 		if (this.locale === null) {

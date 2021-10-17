@@ -21,7 +21,7 @@ export default {
 	},
 	computed: {
 		compiledMarkdown: function () {
-			let htmlFromMarkDown = marked(readMeAboutMarkDownText, { sanitize: false });			
+			let htmlFromMarkDown = marked(readMeAboutMarkDownText, { sanitize: false });
 			let cleanHtml = DOMPurify.sanitize(htmlFromMarkDown);
 			return cleanHtml;
 		}

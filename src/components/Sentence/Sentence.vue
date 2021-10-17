@@ -130,8 +130,8 @@ export default {
 </script>
 <style scoped>
 .sentenceCardContainer {
-  position: -webkit-sticky;
-  position: sticky;
+  /* position: -webkit-sticky;
+  position: sticky; */
   top: 56px;
   z-index: 100;
   padding: 5px;
