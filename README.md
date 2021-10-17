@@ -1,19 +1,26 @@
 # SayLah
 
-A free program designed to help people who are non-verbal.
+<p align="center">
+    <img src="public/img/icons/android-chrome-192x192.png" />
+</p>
+
+A free program designed to help non-verbal individuals find a voice.
 Project page - https://projects.better.sg/SayLah-communication-for-the-nonverbal-283d29898fad485a8ac95394100ac106
 
-Everything listed below is from Merkie, the person with the original idea behind the tool! https://www.youtube.com/watch?v=owr2aIHRJA4
+The application was originally created by [Merkie](https://github.com/Merkie), and you can find this application here: https://github.com/Merkie/freespeech.
 
-## Why Was This Created?
+Everything listed below is paraphrased from Merkie, the person with the original idea behind the tool! 
+Watch a YouTube Video of the original intent of this application here: https://www.youtube.com/watch?v=owr2aIHRJA4
 
-Freespeech was created in response to the few programs out there for non-verbal people that all cost upwards of $200 to $300. As a sibling of a non-verbal sister, I understand that these heavy costs can be big investments for families, especially ones that are not in the financial position to spend that kind of money. I hope Freespeech can get to the point where it can be a viable alternative to the other expensive apps out there. My goal is to help people communicate without a hefty cost.
+## Why Was Freespeech Created?
 
-Many people requested to donate to the project. I'd first recommend you donate to the [Make A Wish](https://secure2.wish.org/site/SPageServer?pagename=donate_now&chid=100-000) charity as they gave my Sister, Della, a wish. If you feel inclined to donate to me and the development of this project, feel free to support me on [ko-fi](https://ko-fi.com/merkie). I am trying to buy myself a new computer as I am currently developing off my parent's laptop. Any money left over after expenses will go to Make A Wish.
+Freespeech was created by Archer Calder in response to the few programs out there for non-verbal people that all cost upwards of $200 to $300. As a sibling of a non-verbal sister, he understood that these heavy costs can be big investments for families, especially ones that are not in the financial position to spend that kind of money. And he hopes Freespeech can get to the point where it can be a viable alternative to the other expensive apps out there. My goal is to help people communicate without a hefty cost.
+
+Many people requested to donate to the project. He would first recommend you donate to the [Make A Wish](https://secure2.wish.org/site/SPageServer?pagename=donate_now&chid=100-000) charity as they gave his Sister, Della, a wish. If you feel inclined to donate to him and the development of this project, feel free to support him on [ko-fi](https://ko-fi.com/merkie). He is trying to buy himself a new computer as he is currently developing off his parent's laptop. Any money left over after expenses will go to Make A Wish.
 
 ## What can run this program and what is its purpose?
 
-This can currently only be ran in web browsers such as chrome and firefox however it will in the future be supported as an IOS and Android applications. This program was created to help non-verbal people and allows the use of a series of buttons to produce sentences that allow them to communicate easily. It also provides a base that the users can modify to help them communicate with ease. 
+This can currently only be ran in web browsers such as Google Chrome and Firefox however it will, in the future, be supported as an IOS and Android application. This program was created to help non-verbal people and allows the use of a series of buttons to produce sentences that allow them to communicate easily. It also provides a base that the users can modify to help them communicate with ease. 
 
 ## What is the plan for the future?
 
@@ -25,7 +32,7 @@ The web site for the program is up and useable, you can find it [here](http://sa
 
 ## Contributing
 
-Can find our source code on [Github](https://github.com/bettersg/saylah).
+You can find our source code on [Github](https://github.com/bettersg/saylah).
 
 Please read [our Contributing guide](/.github/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us. When contributing, email us at [chaitanyabaranwal@better.sg](mailto:chaitanyabaranwal@better.sg) or [sids@better.sg](mailto:sids@better.sg).
 
