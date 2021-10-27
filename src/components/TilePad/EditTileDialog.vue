@@ -55,7 +55,7 @@
 									{{ $t('editMode.tile.navigation') }}
 								</p>
 								<v-select
-									:disabled=disabled
+									:disabled="valid"
 									:items="navigations"
 									v-model="currentTileBeingEdited.navigation"
 									filled
