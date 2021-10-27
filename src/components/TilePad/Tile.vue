@@ -4,8 +4,8 @@
 		raised
 		tile
 		class="mx-auto"
-		:color="typeof localeTileData.accent === 'undefined' ? '#FFFFFFFF' : cardColor"
-		style="height: unset"
+		:color="(typeof localeTileData.accent === 'undefined' || localTileData.accent == 'white') ? $vuetify.theme.accent : cardColor"
+		style="height: unset; padding-top:20px"
 		@click="tileClickedEvent"
 	>
 		<v-container
@@ -87,6 +87,7 @@ export default {
 					/* All attributes from json file for each tile object */
 					name: '',
 					text: '',
+					localeText: '',
 					accent: '',
 					image: '',
 					id: 0,
@@ -111,6 +112,7 @@ export default {
 			default: false
 		}	
 	},
+
 	computed: {
 		...mapState('settings', ['sentenceMode']),
 		...mapGetters({

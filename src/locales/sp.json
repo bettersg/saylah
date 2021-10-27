@@ -22,7 +22,8 @@
     "title": "Oración",
     "instructions": "Agregar mosaicos a esta oración simplemente pulsando sobre los mismos.",
     "buttonSpeak": "Hablar",
-    "buttonClear": "Borrar"
+    "buttonClear": "Borrar",
+    "buttonCopy": "Copiar"
   },
   "editMode": {
     "title": "Estás en modo de edición!",
