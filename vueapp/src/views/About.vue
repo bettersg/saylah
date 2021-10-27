@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import readMeAboutMarkDownText from '!raw-loader!../../README.md';
+import readMeAboutMarkDownText from '!raw-loader!../../../README.md';
 const createDOMPurify = require('dompurify');
 const DOMPurify = createDOMPurify(window);
 

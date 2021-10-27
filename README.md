@@ -1,7 +1,7 @@
 # SayLah
 
 <p align="center">
-    <img src="public/img/icons/android-chrome-192x192.png" />
+    <img src="vueapp/public/img/icons/android-chrome-192x192.png" />
 </p>
 
 A free program designed to help non-verbal individuals find a voice.
