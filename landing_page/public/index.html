@@ -1,428 +1,168 @@
 <!DOCTYPE html>
 <html lang="en" style="font-family: Inter;">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <title>To Be You</title>
-        <!-- CSS  -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-        <link href="parallax-template.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Staatliches&display=swap">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter&display=swap">
-        <meta property="og:url" content="https://tobeyou.sg/"/>
-        <meta property="og:title" content="To Be You: A Singaporean Interactive Fiction Game"/>
-        <meta property="og:description" content="Experience what life is like for someone else. What choices would you make, if you were them?"/>
-        <meta property="og:image" content="/assets/img/shared_characters.jpg"/> 
-        <link href="style.css" rel="stylesheet" type="text/css">
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <link rel="icon" href="favicon.ico" type="image/x-icon">
-        <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/apple-icon-144x144.png">
-        <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/android-icon-192x192.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon-96x96.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
-        <script>
-             
-        var TxtType = function(el, toRotate, period) {
-            this.toRotate = toRotate;
-            this.el = el;
-            this.loopNum = 0;
-            this.period = parseInt(period, 10) || 2000;
-            this.txt = '';
-            this.tick();
-            this.isDeleting = false;
-        };
 
-        TxtType.prototype.tick = function() {
-            var i = this.loopNum % this.toRotate.length;
-            var fullTxt = this.toRotate[i];
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Landing page template better.sg</title>
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="parallax-template.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Staatliches&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter&display=swap">
+    <meta property="og:url" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:image" content="" />
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="144x144" href="#">
+    <link rel="icon" type="image/png" sizes="192x192" href="#">
+    <link rel="icon" type="image/png" sizes="96x96" href="#">
+    <link rel="icon" type="image/png" sizes="16x16" href="">
 
-            if (this.isDeleting) {
-            this.txt = fullTxt.substring(0, this.txt.length - 1);
-            } else {
-            this.txt = fullTxt.substring(0, this.txt.length + 1);
-            }
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6C8ELYHGWW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-            this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+        gtag('config', 'G-6C8ELYHGWW');
+    </script>
+</head>
 
-            var that = this;
-            var delta = 200 - Math.random() * 100;
-
-            if (this.isDeleting) { delta /= 2; }
-
-            if (!this.isDeleting && this.txt === fullTxt) {
-            delta = this.period;
-            this.isDeleting = true;
-            } else if (this.isDeleting && this.txt === '') {
-            this.isDeleting = false;
-            this.loopNum++;
-            delta = 500;
-            }
-
-            setTimeout(function() {
-            that.tick();
-            }, delta);
-        };
-
-        window.onload = function() {
-            var elements = document.getElementsByClassName('typewrite');
-            for (var i=0; i<elements.length; i++) {
-                var toRotate = elements[i].getAttribute('data-type');
-                var period = elements[i].getAttribute('data-period');
-                if (toRotate) {
-                new TxtType(elements[i], JSON.parse(toRotate), period);
-                }
-            }
-            // INJECT CSS
-            var css = document.createElement("style");
-            css.type = "text/css";
-            css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-            document.body.appendChild(css);
-        };
-        </script>
-        
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-6C8ELYHGWW"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-6C8ELYHGWW');
-        </script>
-    </head>
-    <body> 
-        <div id="index-banner" class="header" data-paroller-factor="-0.4" data-paroller-type="background" data-paroller-direction="vertical"> 
-            <div class="section" style="overflow: hidden;">
-                <p class="countdown ">Nadia Chapter 2 now available!</p>
-                <img src="assets/img/logo.png" class="responsive-img header-logo"/>
-                <div class="container header-container">
-                    <div class="center row">
-                        <h1 class="left-align" style="    margin-top: -30px; margin-bottom: 10px ">What&apos;s it like <br class="hide-on-med-and-up show-on-small"> to be  <span class="typewrite" data-period="2000" data-type='[ "Nadia?", "Aman?", "You?", "Me?" ]'> <span class="wrap"></span> </span></h1>
-                        <div class="col l8 left-align m8 s12" style="padding-left:0px !important;">
-                            <p class="p1-key-body">An award-winning Singaporean interactive fiction game that lets you experience life as someone else. What choices would you make, if you were them?</p>
-                            <!-- Change your lens to the world, and you'll change the world -->
-                            <!-- Singapore&rsquo;s first interactive fiction game that challenges how we see race, religion, and background in others &mdash; and ourselves.</p> -->
-                            <a href="https://game.tobeyou.sg" id="play-button" class="modal-trigger btn-large waves-effect waves-light" style="margin-top: 20px; margin-bottom: 20px;">Play the game now!</a> 
-                        </div>
+<body>
+    <div id="index-banner" class="header" data-paroller-factor="-0.4" data-paroller-type="background"
+        data-paroller-direction="vertical">
+        <div class="section" style="overflow: hidden;">
+            <img src="" class="responsive-img header-logo" alt="Insert Page Logo" />
+            <div class="container header-container">
+                <div class="center row">
+                    <h1 class="left-align" style="    margin-top: -30px; margin-bottom: 10px ">Title
+                    </h1>
+                    <div class="col l8 left-align m8 s12" style="padding-left:0px !important;">
+                        <p class="p1-key-body">Description of the Page title</p>
+                        <!-- Change your lens to the world, and you'll change the world -->
+                        <!-- Singapore&rsquo;s first interactive fiction game that challenges how we see race, religion, and background in others &mdash; and ourselves.</p> -->
                     </div>
-                </div>
-                <img src="assets/img/header_characters.png" class="header-characters"/> 
-            </div>
-        </div>
-        <div>
-            <div class="slanted_1 container-snap" id="section_characters" data-pg-name="section1" data-paroller-factor="0.5" data-paroller-type="background" data-paroller-direction="vertical">
-                <div class="section">
-                    <!--   Icon Section   -->
-                    <h3 class="center-align white-text lemongrass" style="text-transform: uppercase; ">Characters in Early Access</h3>
-                    <div class="card instagram" style="
-                    margin-bottom: 24px;
-                "> 
-                        <div class="card-content white-text"> 
-                            <div style="display: inline;">
-                                <img src="assets/img/nadia_profile.jpg" width="48px" class="circle insta-profile-image left" height="48px" style="border: 1px solid #bdbdbd;"/>
-                                <div style="margin-left: 60px;">
-                                    <span class="card-title midnight-dark2">Nadia Binte Rahim</span>
-                                    <span class="grey-text" style="top: -15px; position: relative;">@nadiarah!m</span>
-                                </div>
-                            </div>
-                            <div class="carousel  carousel-slider">
-                                <a class="carousel-item" href="#one!"><img src="assets/img/nadia_slider1.jpg"></a>
-                                <a class="carousel-item" href="#two!"><img src="assets/img/nadia_slider3.jpg"></a>
-                            </div>                             
-                        </div>                         
-                        <div class="card-action" style="padding-top: 0px !important;"> 
-                            <a href="https://www.facebook.com/sharer.php?s=100&p[url]=https%3A%2F%2Ftobeyou.sg"><i class="material-icons pink-text">favorite</i></a>
-                            <span>Liked by Gavin and 32 others</span>
-                            <a href="https://www.facebook.com/sharer.php?s=100&p[url]=https%3A%2F%2Ftobeyou.sg" class="aqua1"><i class="material-icons">share</i></a> 
-                        </div>
-                        <div class="card-content" style="padding-top: 0px !important;">
-                            <p class="instagram-text midnight-dark2">Volleyball practice is tiring, but it&apos;s nowhere near as exhausting as the rest of my life! Sometimes I wonder if everybody has so much drama in their life, or if it&apos;s just me. I want to be a doctor, a good daughter, a reliable friend, and I&apos;m also trying to figure out my faith - and given that I go to a co-ed Christian school, that can get pretty tricky some times. Especially if I end up liking someone who won&apos;t &quot;pass the parent test&quot; because he&apos;s Christian and Chinese. But that&apos;s life as Nadia. And this is what it&apos;s like, to be me.<br> <span class="instagram-hashtag">#ToBeNadia #TooMuchDrama</span></p>
-                        </div>                         
-                        <div class="card-action"> 
-                            <i>CHAPTER 1 NOW AVAILABLE. <br />
-                            Decisions you make now will play out in subsequent chapters!</i>
-                        </div>                         
-                    </div>
-                    <div class="card instagram" style="
-                    margin-top: 24px;
-                "> 
-                        <div class="card-content white-text"> 
-                            <div style="display: inline;">
-                                <img src="assets/img/aman_profile.png" width="48px" class="circle insta-profile-image left" height="48px" style="border: 1px solid #bdbdbd;"/>
-                                <div style="margin-left: 60px;">
-                                    <span class="card-title midnight-dark2">Aman Singh</span>
-                                    <span class="grey-text" style="top: -15px; position: relative;">@amanofhisw0rd</span>
-                                </div>
-                            </div>
-                            <div class="carousel  carousel-slider">
-                                <a class="carousel-item" href="#one!"><img src="assets/img/aman_slider1.jpg"></a>
-                                <a class="carousel-item" href="#two!"><img src="assets/img/aman_slider2.jpg"></a>
-                            </div>                             
-                        </div>                         
-                        <div class="card-action" style="padding-top: 0px !important;"> 
-                            <a href="https://www.facebook.com/sharer.php?s=100&p[url]=https%3A%2F%2Ftobeyou.sg"><i class="material-icons pink-text">favorite</i></a>
-                            <span>Liked by Selinder and 189 others</span>
-                            <a href="https://www.facebook.com/sharer.php?s=100&p[url]=https%3A%2F%2Ftobeyou.sg" class="aqua1"><i class="material-icons">share</i></a> 
-                        </div>
-                        <div class="card-content" style="padding-top: 0px !important;">
-                            <p class="instagram-text midnight-dark2">What do you think about this headshot? Been trying different looks out to see what would work for my casting portfolio. I guess breaking into the acting and modelling world was never going to be easy, but I didn&apos;t realise it would be <span><i style="">so</i></span> hard because of who I am. And there&apos;s so much pressure on me to change how I look, just to have an easier life in NS, or to finally get a casting call back... but I don&apos;t know if that&apos;s the right thing for me to do. I&apos;m lucky my Selinder hearts me for who I am, but life&apos;s pretty tough as Aman. I guess this is what it&apos;s like, to be me.<br><span class="instagram-hashtag">#ToBeAman #PunjabiSikhModel</span></p>
-                        </div>
-                        <div class="card-action"> 
-                            <i>CHAPTER 1 NOW AVAILABLE. <br />
-                            Decisions you make now will play out in subsequent chapters!</i>
-                        </div>                         
-                    </div>
-                </div>
-            </div>
-            <div class="container-snap screenshots_bg" id="section_screenshots" data-pg-name="Screenshots" style="padding-bottom:100px">
-                <div class="section" style="margin-top: 100px">
-                    <h2 class="center-align " style="text-transform: uppercase;">screenshots</h2>
-                    <div class="row container">
-                        <div class="col l4 m4 "> 
-                            <img src="assets/img/screenshot1.png" class="responsive-img  z-depth-2"/>
-                        </div>
-                        <div class="col l4 m4 "> 
-                            <img src="assets/img/screenshot3.png" class="responsive-img  z-depth-2"/>
-                        </div>
-                        <div class="col l4 m4 "> 
-                            <img src="assets/img/screenshot2.png" class="responsive-img  z-depth-2"/>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="section_whoarewe" data-pg-name="who are we" class="tangerine_bg slanted_2">
-                <div class="container fullheight section">
-                    <!--   Icon Section   -->
-                    <div class="row" style="margin-top: 100px;">
-                        <h1 class="white-text">About the Project</h1>
-                        <div class="col l8 m8 s12 p-body-20" style="padding-left:0px"> 
-                            <p class="midnight-dark2">What if you were born as somebody else? What if your race, gender, and other "identities" were something else? Would you still be able to go through life as you have? Would it be easier? Harder? What challenges and opportunities would you have that are different? What would it be like to not be you? </p> 
-                            <p class="midnight-dark2">These are hard questions. But questions we must ask ourselves, so we can be better. </p>
-                            <p class="midnight-dark2">We are building an interactive fiction game that gets to the heart of empathy. But instead of asking people to &quot;walk a mile&quot; in others’ shoes, we are giving you a chance to be them — to <b>play as a character with their identity</b> in our game. </p>
-                            <p class="midnight-dark2"><b>To Be You</b> was conceived to help dismantle stereotypes and reduce prejudice, and ultimately foster greater empathy and inclusiveness among Singaporeans. This idea was one of the winners of the 2020 MCCY:Mission Unite Hackathon. </p>
-                            <p class="midnight-dark2">This is a project by the non-profit volunteer-run techforgood community, <a href="https://better.sg" class="white-text">better.sg</a>. At better.sg, we brainstorm, build, and supercharge techforgood digital tools to address societal issues.</p>
-                            <div class="center-align hide-on-med-and-up show-on-small">
-                                <a href="https://better.sg"><img class="circle responsive-img  z-depth-2" src="assets/img/bettersg.png" width="60%"/></a>                                
-                            </div>                             
-                        </div>
-                        <div class="col hide-on-small-only l3 m3 offset-l1 offset-m1 right-align">
-                            <a href="https://better.sg"><img class="circle  z-depth-2" height="200px" src="assets/img/bettersg.png" style="margin-bottom:36px"/></a>
-                            <img class="circle  z-depth-2" height="200px" src="assets/img/startupx.png"/> 
-                        </div>
-                    </div>
-                    <div class="row" style="padding-bottom: 150px;">
-                        <div class="video-container">
-                            <iframe src="https://www.youtube.com/embed/BaNPkYST-j8" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="section_theteam" data-pg-name="the team" class="white">
-                <div class="container fullheight section">
-                    <!--   Icon Section   -->
-                    <div class="row" style="margin-top: 200px;">
-                        <h1 class="center-align">The team</h1>
-                        <div class="center-align col l6 m6 s6"> 
-                            <img width="200" class="circle responsive-img" style="max-height:200px" src="assets/img/Gaurav.png">
-                            <h3><a href="https://gauravkeerthi.com" style="color:black">Gaurav Keerthi</a></h3>
-                            <p class="bolded left-align midnight-dark2">Co-lead, Dev Team Lead</p>
-                            <p class="instagram-text left-align">Gaurav is a hobby coder and believes that empathy comes from recognising that everybody has a story, and we should take the time to listen and understand first.</p> 
-                        </div>
-                        <div class="center-align col l6 m6 s6">
-                            <img width="200" class="circle responsive-img" height="200" src="assets/img/Mask%20Group.png">
-                            <h3><a href="http://www.zklim.com/" style="color:black">Zikun <br class="hide-on-med-and-up show-on-small"> Lim</a></h3>
-                            <p class="bolded left-align midnight-dark2">Co-lead, Design Team Lead</p>
-                            <p class="instagram-text left-align">Zikun is a UX/Experience designer focused on creating fun and  impactful experiences across digital and physical mediums. </p>
-                        </div>
-                    </div>
-                    <div class="row" style="margin-bottom: 200px; margin-top: 50px;">
-                        <div class="center-align col equal-height-card l4 m6 s12">
-                            <div class="divider red"></div>
-                            <h3>Dev Team</h3>
-                            <ul class="team-text ">
-                                <li>Ariel Ang</li>
-                                <li>Chng Yong Sheng</li>
-                                <li>Joel Kek</li>              
-                                <li><a href="https://flamboyant-joliot-728271.netlify.app/">Leong Yun Qin Melody</a></li>
-                                <li>Peng You Xuan</li>
-                                <li>Ravern Koh</li>
-                                <li><a href="https://www.linkedin.com/in/qi-yan-seah/">Seah Qi Yan</a></li>
-                                <li>Zhang Yaoxian</li>
-                            </ul>
-                        </div>
-                        <div class="center-align col equal-height-card l4 m6 s12">
-                            <div class="divider red"></div>
-                            <h3>Research &amp; Content Team</h3>
-                            <ul class="team-text ">
-                                <li style="color:red">
-                                    <b>Chief Editor:</b> Gayle Goh 
-                                </li>
-                                <li style="color:red">
-                                    <b>Research Lead:</b> Sim Weiheng
-                                </li>
-                                <li>
-                                    <b>Research Advisor:</b> 
-                                    <a href="https://www.linkedin.com/in/kalpanavignehsa/">Dr Kalpana Vignehsa</a>
-                                </li>
-                                <li>
-                                    <a href="https://www.linkedin.com/in/sidcode">Siddhant Shrivastava</a>
-                                </li>
-                                <li>
-                                    Tasleem Banu
-</li>
-                                <li>
-                                    <a href="https://sg.linkedin.com/in/lewis-liu-61408463">Lewis Liu</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="center-align col equal-height-card l4 m6 s12">
-                            <div class="divider red"></div>
-                            <h3>Design Team</h3>
-                            <ul class="team-text ">
-                                <li>Amy Whip</li>                               
-                                <li>Axelle Cheng</li>
-                                <li>
-                                    <a href="https://www.linkedin.com/in/desiree-khng-314343194">Desiree Khng</a> 
-                                </li>                                 
-                                <li>Diandrea Ho</li>
-                                <li>Germaine Lee</li>
-                                <li>Goh Si Hui</li>
-                                <li>Lilian Lee</li>
-                                <li>
-                                    <a href="https://linkedin.com/in/maychiang">May Chiang</a>
-                                </li>
-                                <li>Nikko Jarata Lopez</li>
-                                <li>Peng You Yun</li>
-                            </ul>
-                        </div>
-                        <div class="center-align col equal-height-card l4 m6 s12">
-                            <div class="divider red"></div>
-                            <h3>Growth & Impact Team</h3>
-                            <ul class="team-text ">
-                                <li style="color:red">
-                                    <b>Team Lead:</b> Aaqib Kufran
-                                </li>
-                                <li>Andhika Agung Pratama</li>
-                                <li>Clara Tang</li>
-                                <li>Jasmine Ong</li>
-                                <li>Ramakrishnan Karthigayan</li>                                 
-                                <li>Sherilyn Tan</li>                                 
-                                <li>Wei Yi Tan</li>
-                            </ul>
-                        </div>
-                        <div class="center-align col equal-height-card l8 m12 s12">
-                            <div class="divider red"></div>
-                            <h3>Partners &amp; Freelancers</h3>
-                            <div class="row">
-                                <div class="col m6 s12"> 
-                                    <ul class="team-text ">
-                                        <li>
-                                            <b>Writing Team from Sing Lit Station:</b> 
-                                        </li>
-                                        <li>Celestia De Roza</li>
-                                        <li>Cheng Him</li>
-                                        <li>Crispin Rodrigues</li>
-                                        <li>Don Shiau</li>
-                                        <li>Izyanti Asa'ari</li>
-                                        <li>Jennifer Anne Champion</li>
-                                        <li>Pamela Seong Koon</li>
-                                        <li>Praval Visvanath</li>
-                                        <li>Sarah Mak</li>
-                                        <li>Shivram Gopinath</li>
-                                        <li>tysha khan</li>
-                                        <li>Ummi Tasfia</li>
-                                        <li>Valen Lim</li>
-                                    </ul>                                     
-                                </div>
-                                <div class="col m6 s12"> 
-                                    <ul class="team-text ">
-                                        <li>
-                                            <b>Freelance Writers:</b> 
-                                        </li>
-                                        <li>Sandeep Singh</li>
-                                        <li>
-                                            <b>Illustrators:</b> 
-                                        </li>
-                                        <li><a href="https://isabellarisselle.wixsite.com/portfolio">Isabella Tong</a></li>
-                                        <li><a href="http://instagram.com/clueyc">Chloe Chan</a></li>
-                                        <li>
-                                            <b>Soundtrack:</b> 
-                                        </li>
-                                        <li>
-                                            <a href="https://open.spotify.com/artist/2c6BxHCmJmJXTkIGQL7pzF?si=p83oXHenTee1Ys-VbNqQxA&dl_branch=1">Darren Sng</a>
-                                        </li>
-                                        <li>
-                                            <b>Dev support by OneXTech:</b> 
-                                        </li>
-                                        <li>Ryan Yeo</li>
-                                        <li>Joel Koh</li>
-                                        <li>
-                                            <b>Public Relations by Tate Anzur:</b> 
-                                        </li>
-                                        <li>Tengku Mariam & team </li>                                         
-                                    </ul>                                     
-                                </div>
-                            </div>
-                            <div style="display: flex; justify-content: space-evenly; align-items: top; vertical-align: top;" class="center-block">
-                                <a href="http://www.singlitstation.com/"><img src="assets/img/singlitstation.png" width="100px" class="circle" height="100px"/></a>
-                                <a href="https://onextech.com.sg"><img src="assets/img/onextech.png" width="65px" class="circle" height="65px" style="margin-top: 5px; margin-left: 17px; margin-right: 17px;"/></a>
-                                <a href="http://tateanzur.com"><img src="assets/img/tateanzur.png" width="65px" class="circle" height="65px" style="margin-top: 5px; margin-left: 17px; margin-right: 17px;"/></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="section_signup" data-pg-name="signup" class="chicky-bg  slanted_3" style="padding-bottom: 100px;">
-                <div class="container section">
-                    <!--   Icon Section   -->
-                    <div class="row" style="margin-top: 200px;">
-                        <h1 class="center-align">Get in touch with us!</h1>
-                    </div>
-                    <div class="row">
-                        <div class="col l4 m4 s12"> 
-                            <h3>individuals</h3> 
-                            <p>If you care about empathy in Singapore and want to give us feedback, share your own stories, and help make this game spread like wildfire, get in touch with us! We would also love to hear your experiences with diversity so we can consider it for future characters!</p>
-                            <a href="#modal1" class="btn-large waves-effect yellow-text modal-trigger">CONTACT US</a>
-                        </div>
-                        <div class="col l4 m4 s12"> 
-                            <h3>organisations</h3> 
-                            <p>If you are a school or an organisation that thinks this game might be a good way to get your students or staff to have a productive and positive conversation about empathy and cultural differences, reach out to us and get notified when our "facilitated discussion" toolkit is launched.&nbsp;</p>
-                            <a href="#modal1" class="btn-large waves-effect yellow-text modal-trigger">ENQUIRE NOW</a>
-                        </div>
-                        <div class="col l4 m4 s12"> 
-                            <h3>join the team</h3> 
-                            <p>If you would like to be part of volunteer the team behind this project, and you are able to fill these specific roles (covering illustration, UIUX, social media, public relations) in the team, please do join us as a volunteer (and you'll also join the better.sg community!) </p>
-                            <a href="#modal2" class="btn-large waves-effect yellow-text modal-trigger">VOLUNTEER</a>
-                        </div>
-                    </div>
-                    <span class="h5" id="submission"></span>
                 </div>
             </div>
         </div>
-        <footer class="page-footer" style="background: var(--midnight-dark2);">
-            <div class="container">
-                <p class="white-text" align="center">
-                    Add to the conversation after we launch on 21st July with #ToBeYou on <br> <a href="https://instagram.com/tobeyou.sg">Instagram</a> | <a href="https://t.me/ToBeYouSG">Telegram</a> | <a href="https://www.facebook.com/ToBeYou.SG">Facebook</a>  | <a href="https://www.reddit.com/r/singapore/comments/ooft34/launching_tobeyousg_a_singaporean_interactive/">Reddit</a> </p>
+    </div>
+    <div>
+        <div class="slanted_1 container-snap" id="section_characters" data-pg-name="section1" data-paroller-factor="0.5"
+            data-paroller-type="background" data-paroller-direction="vertical">
+            <div class="section">
+                <!--   Icon Section   -->
+                <h3 class="center-align white-text lemongrass" style="text-transform: uppercase; ">Content and
+                    description of page</h3>
+
             </div>
-            <div class="footer-copyright">
-                <div class="center-align container">
-                    A non-profit volunteer-run project by 
-                    <a class="red-text text-lighten-2" href="https://better.sg">better.sg</a>. 
-                    <br> 
-                    For any queries, please email us at 
-                    <a href="mailto:ToBeYou@better.sg">ToBeYou@better.sg</a> 
-                    <br> 
-                    <small><a href="privacypolicy.html">[ Privacy Policy ]</a> | <a href="help.html">[ Help ]</a></small>
+        </div>
+    </div>
+    <div class="container-snap screenshots_bg" id="section_screenshots" data-pg-name="Screenshots"
+        style="padding-bottom:100px">
+        <div class="section" style="margin-top: 100px">
+            <h2 class="center-align " style="text-transform: uppercase;">screenshots</h2>
+            <div class="row container">
+                <div class="col l4 m4 ">
+                    <img src="" class="responsive-img  z-depth-2" alt="Insert Screenshots" />
+                </div>
+                <div class="col l4 m4 ">
+                    <img src="" class="responsive-img  z-depth-2" alt="Insert Screenshots" />
+                </div>
+                <div class="col l4 m4 ">
+                    <img src="" class="responsive-img  z-depth-2" alt="Insert Screenshots" />
                 </div>
             </div>
-        </footer>
-        <!-- Modal Trigger -->
-        <!-- Modal Structure -->
-        <div id="modal1" class="modal bottom-sheet">
-            <div class="typeform-widget" data-url="https://form.typeform.com/to/UnNtHibn?typeform-medium=embed-snippet&typeform-welcome=0" data-hide-headers="true" data-hide-footer="true" style="width: 100%; height: 350px;"></div>             
-            <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
-            <!-- <form name="submit-to-google-sheet">
+        </div>
+    </div>
+    <div id="section_whoarewe" data-pg-name="who are we" class="tangerine_bg slanted_2">
+        <div class="container fullheight section">
+            <!--   Icon Section   -->
+            <div class="row" style="margin-top: 100px;">
+                <h1 class="white-text">About the Project</h1>
+                <div class="col l8 m8 s12 p-body-20" style="padding-left:0px">
+                    <p class="midnight-dark2"> Insert description of project</p>
+                    <div class="center-align hide-on-med-and-up show-on-small">
+                        <a href="https://better.sg"><img class="circle responsive-img  z-depth-2"
+                                src="assets/img/bettersg.png" width="60%" /></a>
+                    </div>
+                </div>
+                <div class="col hide-on-small-only l3 m3 offset-l1 offset-m1 right-align">
+                    <a href="https://better.sg"><img class="circle  z-depth-2" height="200px"
+                            src="assets/img/bettersg.png" style="margin-bottom:36px" /></a>
+                    <img class="circle  z-depth-2" height="200px" src="" alt="Insert Project logo" />
+                </div>
+            </div>
+            <div class="row" style="padding-bottom: 150px;">
+                <div class="video-container">
+                    <p class="midnight-dark2"> Insert video(if any)</p>
+                    <!-- <iframe src="https://www.youtube.com/embed/BaNPkYST-j8" frameborder="0" allowfullscreen></iframe> -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="section_signup" data-pg-name="signup" class="chicky-bg  slanted_3" style="padding-bottom: 100px;">
+        <div class="container section">
+            <!--   Icon Section   -->
+            <div class="row" style="margin-top: 200px;">
+                <h1 class="center-align">Get in touch with us!</h1>
+            </div>
+            <div class="row">
+                <div class="col l4 m4 s12">
+                    <h3>individuals</h3>
+                    <p> Insert content to attract individual to sign up </p>
+                    <a href="#" class="btn-large waves-effect yellow-text modal-trigger">CONTACT US</a>
+                </div>
+                <div class="col l4 m4 s12">
+                    <h3>organisations</h3>
+                    <p>Insert content to attract organisation to sign up </p>
+                    <a href="#" class="btn-large waves-effect yellow-text modal-trigger">ENQUIRE NOW</a>
+                </div>
+                <div class="col l4 m4 s12">
+                    <h3>join the team</h3>
+                    <p>
+                        Insert content to attract people to join the team.
+                    </p>
+                    <a href="#" class="btn-large waves-effect yellow-text modal-trigger">VOLUNTEER</a>
+                </div>
+            </div>
+            <span class="h5" id="submission"></span>
+        </div>
+    </div>
+    </div>
+    <footer class="page-footer" style="background: var(--midnight-dark2);">
+        <div class="container">
+            <p class="white-text" align="center">
+                Add to the conversation after we launch on ____ <br> <a href="#">Instagram</a> |
+                <a href="#">Telegram</a> | <a href="#">Facebook</a> | <a href="#">Reddit</a>
+            </p>
+        </div>
+        <div class="footer-copyright">
+            <div class="center-align container">
+                A non-profit volunteer-run project by
+                <a class="red-text text-lighten-2" href="https://better.sg">better.sg</a>.
+                <br>
+                For any queries, please email us at
+                <a href="mailto:"> link to email</a>
+                <br>
+                <small><a href="privacypolicy.html">[ Privacy Policy ]</a> | <a href="help.html">[ Help ]</a></small>
+            </div>
+        </div>
+    </footer>
+    <!-- Modal Trigger -->
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal bottom-sheet">
+        <div class="typeform-widget"
+            data-url="https://form.typeform.com/to/UnNtHibn?typeform-medium=embed-snippet&typeform-welcome=0"
+            data-hide-headers="true" data-hide-footer="true" style="width: 100%; height: 350px;"></div>
+        <script> (function () { var qs, js, q, s, d = document, gi = d.getElementById, ce = d.createElement, gt = d.getElementsByTagName, id = "typef_orm", b = "https://embed.typeform.com/"; if (!gi.call(d, id)) { js = ce.call(d, "script"); js.id = id; js.src = b + "embed.js"; q = gt.call(d, "script")[0]; q.parentNode.insertBefore(js, q) } })()</script>
+        <!-- <form name="submit-to-google-sheet">
                 <div class="modal-content" style="padding-bottom:0px; padding-top:10px"> 
                     <h5 class="center-align">CONNECT WITH US!</h5> 
                     <div class="row" style="margin-bottom:0px"> 
@@ -452,49 +192,43 @@
                     </button>
                 </div>
             </form> -->
+    </div>
+    <div id="modal2" class="modal" style="height:80vh">
+        <div class="modal-content">
+            <h4>Volunteer with us</h4>
+            <p>If you would like to join us to support the illustrations, design, game development, growth / impact /
+                outreach, or in any other way, please fill in the form and explain in the comments how you would like to
+                help</p>
         </div>
-        <div id="modal2" class="modal" style="height:80vh">
-            <div class="modal-content">
-                <h4>Volunteer with us</h4>
-                <p>If you would like to join us to support the illustrations, design, game development, growth / impact / outreach, or in any other way, please fill in the form and explain in the comments how you would like to help</p>
-              </div>
-              <div class="modal-footer">
-                <div class="typeform-widget" data-url="https://form.typeform.com/to/UnNtHibn?typeform-medium=embed-snippet&typeform-welcome=0" data-hide-headers="true" data-hide-footer="true" style="width: 100%; height: 350px;"></div>             
-            <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>            
-              </div>
-            
+        <div class="modal-footer">
+            <div class="typeform-widget"
+                data-url="https://form.typeform.com/to/UnNtHibn?typeform-medium=embed-snippet&typeform-welcome=0"
+                data-hide-headers="true" data-hide-footer="true" style="width: 100%; height: 350px;"></div>
+            <script> (function () { var qs, js, q, s, d = document, gi = d.getElementById, ce = d.createElement, gt = d.getElementsByTagName, id = "typef_orm", b = "https://embed.typeform.com/"; if (!gi.call(d, id)) { js = ce.call(d, "script"); js.id = id; js.src = b + "embed.js"; q = gt.call(d, "script")[0]; q.parentNode.insertBefore(js, q) } })()</script>
         </div>
-        <!--  Scripts-->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="materialize/js/materialize.js"></script>
-        <script src="assets/js/jquery.paroller.js"></script>
-        <script>
-    $(document).ready(function () {          
-        $('.carousel').carousel();
-        $('.modal').modal();
 
-        $('.carousel.carousel-slider').carousel({
-            dist:0,
-            fullWidth: true,
-            indicators: true,
-        });
+    </div>
+    <!--  Scripts-->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="materialize/js/materialize.js"></script>
+    <script src="assets/js/jquery.paroller.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.carousel').carousel();
+            $('.modal').modal();
 
-        $("[data-paroller-factor]").paroller();
+            $('.carousel.carousel-slider').carousel({
+                dist: 0,
+                fullWidth: true,
+                indicators: true,
+            });
 
-    })
-   
-        
-    // const scriptURL = 'https://script.google.com/macros/s/AKfycbzwRpmq1SWlgDZj5yC09N12Z7Usqu2-EaKRhU7IVgkK35mxVoe1lSE5MXgAvxkune8/exec'
-    // const form = document.forms['submit-to-google-sheet']
+            $("[data-paroller-factor]").paroller();
 
-    // form.addEventListener('submit', e => {
-    //     e.preventDefault()
-    //     console.log(form)
-    //     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    //     .then(response => document.getElementById("submission").innerHTML = 'Success! Thanks for participating' )
-    //     .catch(error => document.getElementById("submission").innerHTML = 'Something went wrong. Please contact us at limzikun@better.sg if you still cannot submit' +  error.message)
-    // })
+        })
 
-  </script>
-    </body>
+
+    </script>
+</body>
+
 </html>
