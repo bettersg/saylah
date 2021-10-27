@@ -13,13 +13,13 @@ jobs:
           cache-name: cache-node-modules
         with:
           path: ~/.npm # npm cache files are stored in `~/.npm` on Linux/macOS
-          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }}
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('vueapp/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-${{ env.cache-name }}-
       - name: npm install
-        run: npm ci
+        run: cd vueapp && npm ci
       - name: check linting passes
-        run: npm run lint:nofix
+        run: cd vueapp && npm run lint:nofix
   test:
     runs-on: ubuntu-latest
     steps:
@@ -30,25 +30,26 @@ jobs:
           cache-name: cache-node-modules
         with:
           path: ~/.npm # npm cache files are stored in `~/.npm` on Linux/macOS
-          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }}
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('vueapp/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-${{ env.cache-name }}-
       - name: npm install
-        run: npm ci
+        run: cd vueapp && npm ci
       - name: unit tests
-        run: npm run test:unit
+        run: cd vueapp && npm run test:unit
   build_and_preview:
     needs: [lint, test]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Build
-        run: npm ci && npm run build
+        run: cd vueapp && npm ci && npm run build
       - name: Deploy with Firebase
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_SAYLAH }}'
           projectId: saylah
+          entryPoint: vueapp
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
