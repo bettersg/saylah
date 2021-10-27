@@ -1,8 +1,8 @@
-name: Build and Deploy (Live)
+name: Build and Deploy
 on:
   push:
     branches:
-      - deploy
+      - master
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -10,7 +10,7 @@ jobs:
       - name: Fetch repo
         uses: actions/checkout@v2
         with:
-          ref: deploy
+          ref: master
       - name: cache node modules
         uses: actions/cache@v1
         env:
@@ -23,18 +23,16 @@ jobs:
       - name: Install node
         uses: actions/setup-node@master
       - name: Install dependencies
-        run: cd vueapp && npm ci
+        run: cd vueapp & npm ci
       - name: Lint
         run: cd vueapp && npm run lint
       - name: Build
         run: cd vueapp && npm run build
-      - name: Deploy with Firebase
+      - name: Deploy SayLah app with Firebase
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_SAYLAH }}'
           channelId: live
           projectId: saylah
-          target: live
-          entryPoint: vueapp
 
