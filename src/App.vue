@@ -38,7 +38,7 @@
 
 			<v-spacer />
 
-			<v-switch v-model="$vuetify.theme.dark" color="orange" label="Dark Mode" @change="toggleDarkMode"
+			<v-switch v-model="$vuetify.theme.dark" color="orange" label="Dark Mode"
 				style="margin: 15px 15px 0 20px; display: block"/>
 
 			<v-btn
@@ -241,7 +241,7 @@ export default {
 				this.setLocked(true);
 			}
 		},
-		ahtoggleDarkMode(id) {
+		duplicateToggleDarkMode(id) {
 			console.log(id);
 			if(this.darkMode &&  DarkReader.isEnabled()) DarkReader.enable({ brightness: 100,
 				contrast: 90,
