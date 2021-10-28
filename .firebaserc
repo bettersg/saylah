@@ -5,10 +5,10 @@
   "targets": {
     "saylah": {
       "hosting": {
-        "staging": [
-          "saylah-staging"
+        "landing-page": [
+          "saylah-landingpage"
         ],
-        "live": [
+        "app": [
           "saylah"
         ]
       }
