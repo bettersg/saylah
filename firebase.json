@@ -1,7 +1,7 @@
 {
   "hosting": [ {
-      "target": "live",
-      "public": "dist",
+      "target": "app",
+      "public": "vueapp/dist",
       "ignore": [
         "firebase.json",
         "**/.*",
@@ -15,18 +15,12 @@
       ]
     },
     {
-      "target": "staging",
-      "public": "dist",
+      "target": "landing-page",
+      "public": "landing_page/public",
       "ignore": [
         "firebase.json",
         "**/.*",
         "**/node_modules/**"
-      ],
-      "rewrites": [
-        {
-          "source": "**",
-          "destination": "/index.html"
-        }
       ]
     }
   ]
