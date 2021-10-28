@@ -1,0 +1,38 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch repo
+        uses: actions/checkout@v2
+        with:
+          ref: master
+      - name: cache node modules
+        uses: actions/cache@v1
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm # npm cache files are stored in `~/.npm` on Linux/macOS
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('vueapp/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-${{ env.cache-name }}-
+      - name: Install node
+        uses: actions/setup-node@master
+      - name: Install dependencies
+        run: cd vueapp && npm ci
+      - name: Lint
+        run: cd vueapp && npm run lint
+      - name: Build
+        run: cd vueapp && npm run build
+      - name: Deploy SayLah app with Firebase
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_SAYLAH }}'
+          channelId: live
+          projectId: saylah
+
