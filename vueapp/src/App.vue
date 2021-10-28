@@ -180,6 +180,7 @@ export default {
 		},
 	},
 	created() {
+		this.$vuetify.theme.dark = false;
 		if (this.locale === null) {
 			const defaultLanguage = navigator.languages
 				? navigator.languages[0]
