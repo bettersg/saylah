@@ -23,7 +23,7 @@ jobs:
       - name: Install node
         uses: actions/setup-node@master
       - name: Install dependencies
-        run: cd vueapp & npm ci
+        run: cd vueapp && npm ci
       - name: Lint
         run: cd vueapp && npm run lint
       - name: Build

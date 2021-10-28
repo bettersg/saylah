@@ -1,5 +1,6 @@
 {
-  "hosting": [ {
+  "hosting": [
+    {
       "target": "app",
       "public": "vueapp/dist",
       "ignore": [
