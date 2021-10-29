@@ -5,13 +5,18 @@ import router from './router';
 import vuetify from './plugins/vuetify';
 import './registerServiceWorker';
 import i18n from './i18n';
+import VueClipboard from 'vue-clipboard2'; 
 
+
+Vue.use(VueClipboard);
 Vue.config.productionTip = false;
 
-new Vue({
+const app = new Vue({
 	store,
 	router,
 	vuetify,
 	i18n,
 	render: h => h(App)
-}).$mount('#app');
+});
+
+app.$mount('#app');
