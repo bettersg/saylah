@@ -54,6 +54,8 @@ Please make sure to follow our [Code Of Conduct](/.github/CODE_OF_CONDUCT.md) in
 
 * **Siddhant Shrivastava** - [GitHub](https://github.com/sidcode)
 * **Chaitanya Baranwal** - [GitHub](https://github.com/chaitanyabaranwal)
+* **Prannaya Gupta** - [GitHub](https://github.com/ThePyProgrammer/)
+* **Ong Hong Rui** - [GitHub](https://github.com/OHR2328)
 
 ## Community
 
