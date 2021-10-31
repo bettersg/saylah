@@ -8,7 +8,7 @@
 ## Feature Requests
 
 We love feature requests! We want to make Saylah as accessible to as many people as possible. If you have an
-idea you'd like to see in Saylah feel free to submit an issue, or even a Pull Request implementing the
+idea you'd like to see in SayLah feel free to submit an issue following our [template format](ISSUE_TEMPLATE/feature_request.md), or even a Pull Request implementing the
 change! Although we won't be able to implement every feature everyone may make or want. We want to get as many as possible
 that improves Saylah.
 
@@ -19,11 +19,12 @@ submitting an issue to our [GitHub Repository](https://github.com/bettersg/sayla
 with a fix.
 
 ### Submitting an Issue
+
 Before you submit your issue search the archive, maybe your question was already answered.
 
 If your issue appears to be a bug and hasn't been reported, open a new issue. Help us to maximize
 the effort we can spend fixing issues and adding new features, by not reporting duplicate issues.
-
+Following this [template](ISSUE_TEMPLATE/bug_report.md) will quicken the effort of fixing the issue.
 
 ## Installation and Setup
 
@@ -56,23 +57,27 @@ npm run test:unit
 ```
 
 ## Testing
+
 Please keep unit testing in mind when contributing. Here is a great resource for this [Vue Test Utils](https://vue-test-utils.vuejs.org).
 - Add tests for any new features
 - If there is a bug create a test to see if it can be recreated and stop it from happening again.
 
  We understand unit testing can be a tough concept at the start of a coding career. We do not want this to be a barrier to stop you from contributing. Please add unit tests if you have the knowledge. If not please reach out to us in the PR and we will help you or point you at examples or documentation to help you implement them.
 
- ##  <a name="prProcess"></a> Pull Request Process
+##  <a name="prProcess"></a> Pull Request Process
+
 Before you submit your pull request consider the following guidelines:
 
 * Search [GitHub](https://github.com/bettersg/saylah/pulls) for an open or closed Pull Request
   that relates to your submission. You don't want to duplicate effort.
 * [Fork](https://help.github.com/articles/fork-a-repo/) this repo.
 * [Clone](https://help.github.com/articles/cloning-a-repository/) your copy.
+
     ```shell
     git clone https://github.com/YOUR_USERNAME/saylah.git
     cd saylah/
     ```
+
 * After cloning, set a new remote [upstream](https://help.github.com/articles/configuring-a-remote-for-a-fork/) (this helps to keep your fork up to date)
     
     ```shell
@@ -92,7 +97,6 @@ Before you submit your pull request consider the following guidelines:
     ```
   Note: the optional commit `-a` command line option will automatically "add" and "rm" edited files.
 
-* Make sure tests still pass with `npm run test:unit`. Fix any issues if test fail or change the test appropriately.
 * Please add tests for new features you create. If not please state it in the PR. We can help you create them. But prefer for you to if you have the knowledge.
 
 * Push your branch to GitHub:
@@ -101,7 +105,8 @@ Before you submit your pull request consider the following guidelines:
     git push origin my-fix-branch
     ```
 
-In GitHub, send a pull request to `saylah:master`.
+* In GitHub, send a pull request to `saylah:master`. This will run unit tests and lint tests using GitHub Actions, and if they do not pass we may request you for changes in the code.
+
 If we suggest changes, then:
 
 * Make the required updates.
@@ -118,7 +123,6 @@ git push origin my-fix-branch -f
 ```
 
 That's it! Thank you for your contribution! 
-
 
 Most of is text is taken from the [RuneLite repo](https://github.com/runelite/runelite/blob/master/.github/CONTRIBUTING.md).
 Thank you for the great template of a CONTRIBUTING guide and such great examples of git commands!
