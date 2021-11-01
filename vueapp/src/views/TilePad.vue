@@ -6,15 +6,17 @@
 			@clearSentence="sentenceTiles = []"
 			@speakSentence="speakSentence"
 			@removeFromSentence="sentenceTiles.splice($event, 1)"
+			:text="this.sentenceTiles.map(tile => tile.text).join(' ')"
 		/>
 		<edit-mode-header
 			v-if="editMode"
 		/>
 		<v-container
 			fluid
-			class="grey lighten-5 pb-10"
+			class="pb-10"
 			style="{text-align: center}"
-		>
+		> 
+			<!-- grey lighten-5  -->
 			<v-row dense>
 				<Tile
 					v-if="editMode"
@@ -81,7 +83,7 @@ export default {
 	data () {
 		return {
 			tileData: TileData,
-			sentenceTiles: [],
+			sentenceTiles: []
 		};
 	},
 	computed: {

@@ -22,7 +22,8 @@
     "title": "Sentence",
     "instructions": "Add tiles to this sentence by tapping on them below.",
     "buttonSpeak": "Speak",
-    "buttonClear": "Clear"
+    "buttonClear": "Clear",
+    "buttonCopy": "Copy"
   },
   "editMode": {
     "title": "You're in edit mode!",

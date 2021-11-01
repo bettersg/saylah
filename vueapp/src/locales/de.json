@@ -21,6 +21,7 @@
 		"title": "Satz",
 		"instructions": "Fügen Sie diesem Satz Kacheln hinzu, indem Sie unten darauf tippen.",
 		"buttonSpeak": "Sprechen",
-		"buttonClear": "Löschen"
+		"buttonClear": "Löschen",
+		"buttonCopy": "Kopieren"
 	}
 }

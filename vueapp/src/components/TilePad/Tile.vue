@@ -4,18 +4,16 @@
 		raised
 		tile
 		class="mx-auto"
-		:color="typeof localeTileData.accent === 'undefined' ? '#FFFFFFFF' : cardColor"
-		style="height: unset"
+		:color="
+			typeof localeTileData.accent === 'undefined'
+				? $vuetify.theme.accent
+				: cardColor
+		"
+		style="height: unset; padding-top: 20px"
 		@click="tileClickedEvent"
 	>
-		<v-container
-			v-if="newTile"
-			justify="center"
-		>
-			<v-row
-				align="center"
-				justify="center"
-			>
+		<v-container v-if="newTile" justify="center">
+			<v-row align="center" justify="center">
 				<v-img
 					max-height="32"
 					max-width="32"
@@ -24,29 +22,16 @@
 				/>
 			</v-row>
 			<v-row>
-				<v-card-text
-					class
-					align="center"
-					justify="center"
-				>
+				<v-card-text class align="center" justify="center">
 					<h4>Add a New Tile</h4>
 				</v-card-text>
 			</v-row>
 		</v-container>
-		<v-container
-			v-else
-			justify="center"
-		>
-			<span
-				v-if="displayTapCount && !editMode"
-				class="taps-count"
-			>{{
+		<v-container v-else justify="center">
+			<span v-if="displayTapCount && !editMode" class="taps-count">{{
 				taps
 			}}</span>
-			<v-row
-				align="center"
-				justify="center"
-			>
+			<v-row align="center" justify="center">
 				<v-img
 					max-height="32"
 					max-width="32"
@@ -55,18 +40,14 @@
 				/>
 			</v-row>
 			<v-row>
-				<v-card-text
-					class
-					align="center"
-					justify="center"
-				>
+				<v-card-text class align="center" justify="center">
 					<h3>{{ localeTileData.name }}</h3>
 					<img
 						v-if="editMode"
 						id="drag-handle"
 						src="https://img.icons8.com/officexs/16/000000/resize-four-directions.png"
-						style="padding-top: 8px; margin-bottom: -12px;"
-					>
+						style="padding-top: 8px; margin-bottom: -12px"
+					/>
 				</v-card-text>
 			</v-row>
 		</v-container>
@@ -87,6 +68,7 @@ export default {
 					/* All attributes from json file for each tile object */
 					name: '',
 					text: '',
+					localeText: '',
 					accent: '',
 					image: '',
 					id: 0,
@@ -104,13 +86,14 @@ export default {
 		},
 		sentenceIndex: {
 			type: Number,
-			default: null
+			default: null,
 		},
-		newTile:{
+		newTile: {
 			type: Boolean,
-			default: false
-		}	
+			default: false,
+		},
 	},
+
 	computed: {
 		...mapState('settings', ['sentenceMode']),
 		...mapGetters({
@@ -119,7 +102,7 @@ export default {
 			displayTapCount: 'settings/displayTapCount',
 			tileTapsCount: 'tilePad/tileTapsCount',
 		}),
-		
+
 		/* Make card color, if hex value return that. */
 		//Might delete this feature and replace with just listed accents for simplicity.
 		cardColor: function () {
@@ -162,10 +145,11 @@ export default {
 	},
 	methods: {
 		...mapActions('tilePad', [
-			'toggleEditDialogVisibility', 
+			'toggleEditDialogVisibility',
 			'setCurrentTileBeingEdited',
 			'createNewTile',
-			'logTileTap']),
+			'logTileTap',
+		]),
 		tileClickedEvent() {
 			let keyboardTile =
         typeof this.tileData.navigation !== 'undefined' &&
@@ -175,7 +159,7 @@ export default {
 				// if in edit tiles mode
 				let tileDataToEdit = this.tileData;
 				tileDataToEdit.page = this.tilePage;
-				if(this.newTile){
+				if (this.newTile) {
 					tileDataToEdit.newTile = true;
 				}
 				this.setCurrentTileBeingEdited(tileDataToEdit);

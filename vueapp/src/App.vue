@@ -38,6 +38,9 @@
 
 			<v-spacer />
 
+			<v-switch v-model="$vuetify.theme.dark" color="orange" label="Dark Mode"
+				style="margin: 15px 15px 0 20px; display: block"/>
+
 			<v-btn
 				icon
 				to="/"
@@ -86,8 +89,7 @@
 				</v-icon>
 			</v-btn>
 		</v-app-bar>
-
-		<v-content>
+		<v-content id="container">
 			<router-view />
 			<EditDialog />
 		</v-content>
@@ -132,7 +134,7 @@ export default {
 		passcodeError: false,
 		passcodeLength: 4,
 		drawerShown: false,
-		store: store,
+		store: store
 	}),
 	computed: {
 		...mapGetters({
@@ -171,6 +173,7 @@ export default {
 		},
 	},
 	created() {
+		this.$vuetify.theme.dark = false;
 		if (this.locale === null) {
 			const defaultLanguage = navigator.languages
 				? navigator.languages[0]
