@@ -122,7 +122,6 @@ import EditDialog from '@/components/TilePad/EditTileDialog';
 import NumberPad from '@/components/NumberPad/NumberPad';
 import { mapActions, mapGetters } from 'vuex';
 import store from '@/plugins/vuex';
-import DarkReader from 'darkreader';
 
 export default {
 	name: 'App',

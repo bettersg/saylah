@@ -1,62 +1,62 @@
 <template>
 	<div>
-			<Sentence
-				v-if="sentenceMode && !editMode"
-				:tile-pad-to-display="sentenceTiles"
-				@clearSentence="sentenceTiles = []"
-				@speakSentence="speakSentence"
-				@removeFromSentence="sentenceTiles.splice($event, 1)"
-				:text="this.sentenceTiles.map(tile => tile.text).join(' ')"
-			/>
-			<edit-mode-header
-				v-if="editMode"
-			/>
-			<v-container
-				fluid
-				class="pb-10"
-				style="{text-align: center}"
-			> 
-				<!-- grey lighten-5  -->
-				<v-row dense>
-					<Tile
-						v-if="editMode"
-						id="newTile"
-						:new-tile="true"
-						:tile-page="currentTilePadPage"
-					/>
+		<Sentence
+			v-if="sentenceMode && !editMode"
+			:tile-pad-to-display="sentenceTiles"
+			@clearSentence="sentenceTiles = []"
+			@speakSentence="speakSentence"
+			@removeFromSentence="sentenceTiles.splice($event, 1)"
+			:text="this.sentenceTiles.map(tile => tile.text).join(' ')"
+		/>
+		<edit-mode-header
+			v-if="editMode"
+		/>
+		<v-container
+			fluid
+			class="pb-10"
+			style="{text-align: center}"
+		> 
+			<!-- grey lighten-5  -->
+			<v-row dense>
+				<Tile
+					v-if="editMode"
+					id="newTile"
+					:new-tile="true"
+					:tile-page="currentTilePadPage"
+				/>
 
-				</v-row>
-				<v-row dense>
-					<draggable
-						v-model="tilePadToDisplay.tileData"
-						style="display: contents"
-						:options="{disabled: !editMode, handle: '#drag-handle'}"
-						class="tilePadContainer"
-					>
-						<template v-for="(tile, tileIndex) in  tilePadToDisplay.tileData">
-							<v-col
-								:key="tileIndex + 1"
-								:cols="
-									$vuetify.breakpoint.xsOnly
-										? 3
-										: $vuetify.breakpoint.smAndDown
-											? 2
-											: 1
-								"
-								class="d-flex child-flex"
-								style="padding: 4px"
-							>
-								<Tile
-									:tile-data="tile"
-									:tile-page="currentTilePadPage"
-									@speakText="speakText"
-									@addToSentence="sentenceTiles.push($event)"
-								/>
-							</v-col>
-						</template>
-					</draggable>
-				</v-row>
-			</v-container>
+			</v-row>
+			<v-row dense>
+				<draggable
+					v-model="tilePadToDisplay.tileData"
+					style="display: contents"
+					:options="{disabled: !editMode, handle: '#drag-handle'}"
+					class="tilePadContainer"
+				>
+					<template v-for="(tile, tileIndex) in  tilePadToDisplay.tileData">
+						<v-col
+							:key="tileIndex + 1"
+							:cols="
+								$vuetify.breakpoint.xsOnly
+									? 3
+									: $vuetify.breakpoint.smAndDown
+										? 2
+										: 1
+							"
+							class="d-flex child-flex"
+							style="padding: 4px"
+						>
+							<Tile
+								:tile-data="tile"
+								:tile-page="currentTilePadPage"
+								@speakText="speakText"
+								@addToSentence="sentenceTiles.push($event)"
+							/>
+						</v-col>
+					</template>
+				</draggable>
+			</v-row>
+		</v-container>
 	</div>
 </template>
 
@@ -78,8 +78,7 @@ export default {
 		Tile,
 		Sentence,
 		draggable,
-		EditModeHeader,
-		vueCustomScrollbar
+		EditModeHeader
 	},
 	data () {
 		return {
