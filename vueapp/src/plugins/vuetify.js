@@ -21,6 +21,6 @@ export default new Vuetify({
 				//here you will define primary secondary stuff for dark theme
 			}
 		},
-		dark: true
+		dark: false
 	}
 });

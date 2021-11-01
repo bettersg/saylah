@@ -135,13 +135,7 @@ export default {
 		passcodeError: false,
 		passcodeLength: 4,
 		drawerShown: false,
-		store: store,
-		darkMode: false,
-		settings: {
-			suppressScrollY: false,
-			suppressScrollX: false,
-			wheelPropagation: false
-		}
+		store: store
 	}),
 	computed: {
 		...mapGetters({
@@ -241,37 +235,7 @@ export default {
 				this.disableEditMode();
 				this.setLocked(true);
 			}
-		},
-		duplicateToggleDarkMode(id) {
-			console.log(id);
-			if(this.darkMode &&  DarkReader.isEnabled()) DarkReader.enable({ brightness: 100,
-				contrast: 90,
-				sepia: 10 });
-			else DarkReader.disable();
-		},
-		toggleDarkMode(id) {
-			console.log(id);
-			if (window) {
-				const {
-					enable: enableDarkMode,
-					disable: disableDarkMode,
-				} = require('darkreader');
-				if (this.dark || (!this.dark && this.systemDark)) {
-					enableDarkMode({ brightness: 100,
-						contrast: 90,
-						sepia: 10 });
-				} else disableDarkMode();
-			}
-		},
-		scrollHanle(evt) {
-			console.log(evt);
 		}
 	}
 };
 </script>
-<style >
-.scroll-area {
-  position: relative;
-  margin: auto;
-}
-</style>

@@ -1,6 +1,5 @@
 <template>
 	<div>
-		<vue-custom-scrollbar class="scroll-area" :settings="settings">
 			<Sentence
 				v-if="sentenceMode && !editMode"
 				:tile-pad-to-display="sentenceTiles"
@@ -58,15 +57,12 @@
 					</draggable>
 				</v-row>
 			</v-container>
-		</vue-custom-scrollbar>
 	</div>
 </template>
 
 <script>
 import { mapGetters, mapActions, mapState } from 'vuex';
 import draggable from 'vuedraggable';
-import vueCustomScrollbar from 'vue-custom-scrollbar';
-import 'vue-custom-scrollbar/dist/vueScrollbar.css';
 
 // object to access the speechSynthesis API
 const SPEECH_SYNTHESIS = window.speechSynthesis;
@@ -88,12 +84,7 @@ export default {
 	data () {
 		return {
 			tileData: TileData,
-			sentenceTiles: [],
-			settings: {
-				suppressScrollY: false,
-				suppressScrollX: false,
-				wheelPropagation: false
-			}
+			sentenceTiles: []
 		};
 	},
 	computed: {
@@ -162,9 +153,3 @@ export default {
 	}
 };
 </script>
-<style>
-.scroll-area {
-  position: relative;
-  margin: auto;
-}
-</style>
