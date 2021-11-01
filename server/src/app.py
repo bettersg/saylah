@@ -17,7 +17,7 @@ def speakSinglish(text):
     AudioSegment((np.iinfo(np.int16).max * vocoder(tacotron.predict(request.json["text"])["universal-output"])).astype(np.int16).tobytes(), frame_rate=22050, sample_width=2, channels=1).export(mp3, format="mp3", bitrate="320k")
     mp3.seek(0)
     return send_file(mp3, as_attachment=True, attachment_filename='test.mp3', mimetype='audio/mpeg')
-    
+
 
 if __name__ == '__main__':
     tacotron = malaya_speech.tts.tacotron2(model='female-singlish')
