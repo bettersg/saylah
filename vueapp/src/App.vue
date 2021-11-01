@@ -122,7 +122,6 @@ import EditDialog from '@/components/TilePad/EditTileDialog';
 import NumberPad from '@/components/NumberPad/NumberPad';
 import { mapActions, mapGetters } from 'vuex';
 import store from '@/plugins/vuex';
-import DarkReader from 'darkreader';
 
 export default {
 	name: 'App',
@@ -235,37 +234,7 @@ export default {
 				this.disableEditMode();
 				this.setLocked(true);
 			}
-		},
-		duplicateToggleDarkMode(id) {
-			console.log(id);
-			if(this.darkMode &&  DarkReader.isEnabled()) DarkReader.enable({ brightness: 100,
-				contrast: 90,
-				sepia: 10 });
-			else DarkReader.disable();
-		},
-		toggleDarkMode(id) {
-			console.log(id);
-			if (window) {
-				const {
-					enable: enableDarkMode,
-					disable: disableDarkMode,
-				} = require('darkreader');
-				if (this.dark || (!this.dark && this.systemDark)) {
-					enableDarkMode({ brightness: 100,
-						contrast: 90,
-						sepia: 10 });
-				} else disableDarkMode();
-			}
-		},
-		scrollHanle(evt) {
-			console.log(evt);
 		}
 	}
 };
 </script>
-<style >
-.scroll-area {
-  position: relative;
-  margin: auto;
-}
-</style>
