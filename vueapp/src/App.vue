@@ -135,13 +135,7 @@ export default {
 		passcodeError: false,
 		passcodeLength: 4,
 		drawerShown: false,
-		store: store,
-		darkMode: false,
-		settings: {
-			suppressScrollY: false,
-			suppressScrollX: false,
-			wheelPropagation: false
-		}
+		store: store
 	}),
 	computed: {
 		...mapGetters({
