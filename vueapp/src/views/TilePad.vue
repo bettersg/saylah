@@ -57,15 +57,12 @@
 				</draggable>
 			</v-row>
 		</v-container>
-		</vue-custom-scrollbar>
 	</div>
 </template>
 
 <script>
 import { mapGetters, mapActions, mapState } from 'vuex';
 import draggable from 'vuedraggable';
-import vueCustomScrollbar from 'vue-custom-scrollbar';
-import 'vue-custom-scrollbar/dist/vueScrollbar.css';
 
 // object to access the speechSynthesis API
 const SPEECH_SYNTHESIS = window.speechSynthesis;
@@ -155,9 +152,3 @@ export default {
 	}
 };
 </script>
-<style>
-.scroll-area {
-  position: relative;
-  margin: auto;
-}
-</style>
