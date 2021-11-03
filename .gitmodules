@@ -1,6 +1,0 @@
-[submodule "references/Next-Word-Prediction-with-NLP-and-Deep-Learning"]
-	path = references/Next-Word-Prediction-with-NLP-and-Deep-Learning
-	url = https://github.com/Bharath-K3/Next-Word-Prediction-with-NLP-and-Deep-Learning
-[submodule "references/next-word-prediction"]
-	path = references/next-word-prediction
-	url = https://github.com/vrann/next-word-prediction
