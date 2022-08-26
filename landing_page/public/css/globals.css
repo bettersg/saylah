@@ -1,0 +1,48 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@import url("https://fonts.googleapis.com/css?family=Inter:400,700,900,500,800");
+@font-face {
+  font-family: "Adapter PE Display-Black";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/AdapterPEDisplay-Bl.otf") format("opentype");
+}
+@font-face {
+  font-family: "SF Pro Text-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/SF-Pro-Text-Regular.otf") format("opentype");
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
