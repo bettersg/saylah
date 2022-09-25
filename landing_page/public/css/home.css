@@ -1397,7 +1397,8 @@ animation: bp2-animate-enter10-frames 0.25s ease-in-out 0.50s 1 normal forwards;
 }
 
 .home-1440-px .screenshot {
-  max-width: 75%;
+  width: 80%;
+  max-width: 1325px;
   display: flex;
   flex-direction: column;
   align-items: center;
