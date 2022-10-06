@@ -39,6 +39,7 @@ jobs:
         run: cd vueapp && npm run test:unit
   build-and-preview:
     needs: [lint, test]
+    if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
