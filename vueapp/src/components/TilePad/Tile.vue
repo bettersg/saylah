@@ -5,9 +5,7 @@
 		tile
 		class="mx-auto"
 		:color="
-			typeof localeTileData.accent === 'undefined'
-				? $vuetify.theme.accent
-				: cardColor
+			$vuetify.theme.accent
 		"
 		style="height: unset; padding-top: 20px"
 		@click="tileClickedEvent"
