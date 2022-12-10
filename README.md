@@ -30,6 +30,14 @@ The program is always evolving and so the future development ideas can be found 
 
 The web site for the program is up and useable, you can find it [here](http://saylah.sg/). All the changes merged with the `deploy` branch are available there.
 
+## Running the app locally
+
+The app uses Vue, so running it involves the following steps. Your device needs to have [Node.js, npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) (and optionally, [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable)) installed to run the app.
+
+1. `cd vueapp/`: Navigate to the app directory 
+2. `yarn` or `npm install`: Install the packages required for the app.
+3. `yarn serve` or `npm run serve`: Run the app locally!
+
 ## Contributing
 
 You can find our source code on [Github](https://github.com/bettersg/saylah).
